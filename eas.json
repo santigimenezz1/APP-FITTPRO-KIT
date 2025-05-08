@@ -1,0 +1,32 @@
+{
+  "cli": {
+    "version": ">= 12.3.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "autoIncrement": true, 
+      "releaseChannel": "production",
+      "android": {
+        "buildType": "apk"
+
+      },
+      "ios": {
+        "buildConfiguration": "Release",
+        "env": {
+          "EXPO_USE_MODULAR_HEADERS": "true"
+        }
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

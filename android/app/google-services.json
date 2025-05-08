@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "131865096972",
+    "project_id": "app-futbol-5cbc0",
+    "storage_bucket": "app-futbol-5cbc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131865096972:android:f2be5f9a65a0bbd81a0f29",
+        "android_client_info": {
+          "package_name": "com.santigimenezz.proyectoNative"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7oMM85NI4CSiMFsGCD_6EqGIh669CKAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131865096972:android:794a351c659d9c271a0f29",
+        "android_client_info": {
+          "package_name": "trainging.soccer.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7oMM85NI4CSiMFsGCD_6EqGIh669CKAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
