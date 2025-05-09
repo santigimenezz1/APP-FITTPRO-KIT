@@ -26,6 +26,8 @@ const TarjetaConsejos = () => {
                     {idiomaActual === "bandera" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Trainiere 10–30 Minuten pro Tag, um die besten Ergebnisse zu erzielen. Beständigkeit ist entscheidend</Text>}
                     {idiomaActual === "paises bajos" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Trainiere 10–30 Minuten pro Tag, um die besten Ergebnisse zu erzielen. Beständigkeit ist entscheidend</Text>}
                     {idiomaActual === "inglaterra" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Train for 10–30 minutes per day to achieve the best results. Consistency is key</Text>}
+                    {idiomaActual === "portugal" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Treine 10 a 30 minutos por dia para obter melhores resultados. A consistência é essencial</Text>}
+
             </View>
             </View>
 
@@ -38,6 +40,8 @@ const TarjetaConsejos = () => {
                     {idiomaActual === "bandera" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Beginne langsam, meistere es und entscheide dann über die Geschwindigkeit</Text>}
                     {idiomaActual === "paises bajos" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Beginne langsam, meistere es und entscheide dann über die Geschwindigkeit</Text>}
                     {idiomaActual === "inglaterra" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Start slow, master it, and then decide the speed</Text>}
+                    {idiomaActual === "portugal" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Comece devagar, domine e depois decide a velocidade.</Text>}
+
             </View>
             </View>
             <View style={styles.container__consejos}>
@@ -49,6 +53,8 @@ const TarjetaConsejos = () => {
                     {idiomaActual === "bandera" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Überspringe keine Übungen, um verschiedene Fähigkeiten gleichermaßen zu verbessern</Text>}
                     {idiomaActual === "paises bajos" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Überspringe keine Übungen, um verschiedene Fähigkeiten gleichermaßen zu verbessern</Text>}
                     {idiomaActual === "inglaterra" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Don't skip exercises to improve different skills equally</Text>}
+                    {idiomaActual === "portugal" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Não deixa os exercícios para melhorar diferentes habilidades igualmente.</Text>}
+
             </View>
             </View>
 

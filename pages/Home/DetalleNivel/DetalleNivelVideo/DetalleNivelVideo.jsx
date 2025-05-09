@@ -75,8 +75,6 @@ const DetalleNivelVideo = () => {
                         />
                         }
                     </View>
-
-                    
                     <View style={{ width: RFValue(300), borderWidth: 3, borderColor: "hsl(199, 76%, 28%)", marginTop: 20 }}>
                         <Image source={{ uri: ejercicio.imagenVideo }} style={{ width: "100%", height: RFValue(120) }} />
                     </View>
@@ -94,6 +92,8 @@ const DetalleNivelVideo = () => {
                                 {idiomaActual === "bandera" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
                                 {idiomaActual === "paises bajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
                                 {idiomaActual === "inglaterra" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
+                                {idiomaActual === "portugal" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
+
                             </TouchableOpacity>
                             <TouchableOpacity 
                                 style={ botonActive === "Training" ? styles.botonOn : styles.botonDesactivado }
@@ -104,8 +104,7 @@ const DetalleNivelVideo = () => {
                                {idiomaActual === "bandera" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
                                {idiomaActual === "paises bajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
                                {idiomaActual === "inglaterra" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
-
-
+                               {idiomaActual === "portugal" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Treinamento</Text>}
                             </TouchableOpacity>
                         </View>
                     </View>

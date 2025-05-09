@@ -12,7 +12,7 @@ const GlobalContext = ({ children }) => {
       email: "",
       password: "",
       nombre: "",
-      pais: "espana",
+      pais: "",
       numeroCamiseta: "",
       posicion: "",
       clubFavorito: "",

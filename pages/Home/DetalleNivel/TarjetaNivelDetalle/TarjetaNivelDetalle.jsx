@@ -22,7 +22,7 @@ const TarjetaNivelDetalle = ( {setModalVisible,nivel, tiempo, navigation, ejerci
         <Pressable onPress={()=>navegarDetalleVideo()} style={styles.container__tarjetaNivel}>
             <View>
             <Text style={styles.text}>{ejercicio.nombre}</Text>
-            <Text style={styles.texth2}>{"asd"}</Text>
+            <Text style={styles.texth2}>{ejercicio.duracion}</Text>
             </View>
             {
                 !closed ?

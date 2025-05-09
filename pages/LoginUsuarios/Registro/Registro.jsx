@@ -8,8 +8,9 @@ import { addDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import { create, db, login } from '../../../firebaseConfig';
 import * as ImagePicker from 'expo-image-picker';
 import FlashMessage, { showMessage } from 'react-native-flash-message';
+import { Picker } from '@react-native-picker/picker';
 
-// Esquema de validación con Yup
+// ✅ Validación con Yup                
 const RegistroSchema = Yup.object().shape({
   email: Yup.string()
     .email('Email no válido')
@@ -19,38 +20,40 @@ const RegistroSchema = Yup.object().shape({
     .required('La contraseña es requerida'),
   repeatPassword: Yup.string()
     .oneOf([Yup.ref('password'), null], 'Las contraseñas deben coincidir')
-    .required('La confirmación de la contraseña es requerida')
+    .required('La confirmación de la contraseña es requerida'),
+  tipoUsuario: Yup.string()
+    .required('Selecciona un país o idioma'),
 });
 
 const Registro = ({ navigation }) => {
-  const { userRegistro, setUserRegistro, setUsuarioOn, userOnline, setUserOnline } = useContext(CartContext);
+  const { userRegistro, setUserRegistro, setUsuarioOn, setUserOnline, idiomaActual, setIdiomaActual } = useContext(CartContext);
   const [imagen, setImagen] = useState(null);
 
   const verificarUsuarioExistente = async (email) => {
     const userColecction = collection(db, "usuarios");
     const q = query(userColecction, where("email", "==", email));
     const querySnapshot = await getDocs(q);
-
-    return !querySnapshot.empty; // Devuelve true si el usuario ya existe
+    return !querySnapshot.empty;
   };
 
-  const crearUsuario = async () => {
+  const crearUsuario = async (usuario) => {
     try {
-      const usuarioExistente = await verificarUsuarioExistente(userRegistro.email);
+      const usuarioExistente = await verificarUsuarioExistente(usuario.email);
       if (usuarioExistente) {
         showMessage({
           message: 'Usuario ya registrado',
           description: 'El email ingresado ya está en uso.',
-          type: 'danger', // Tipo de mensaje: "success", "info", "warning", "danger"
+          type: 'danger',
         });
-        return; // Salir de la función si el usuario ya existe
+        return;
       }
-      await create(userRegistro.email, userRegistro.password);
-      setUserOnline({email: userRegistro.email})
-      await login(userRegistro.email, userRegistro.password, setUsuarioOn);
 
-      let userColecction = collection(db, "usuarios");
-      await addDoc(userColecction, userRegistro);
+      await create(usuario.email, usuario.password);
+      setUserOnline({ email: usuario.email });
+      await login(usuario.email, usuario.password, setUsuarioOn);
+
+      const userColecction = collection(db, "usuarios");
+      await addDoc(userColecction, usuario);
 
       showMessage({
         message: 'Registro exitoso',
@@ -67,75 +70,84 @@ const Registro = ({ navigation }) => {
     }
   };
 
-  let openImagePicker = async () => {
-    let resultadoPermisos = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (resultadoPermisos.granted === false) {
+  const openImagePicker = async () => {
+    let permisos = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (!permisos.granted) {
       alert("Permisos necesarios para acceder a la cámara");
       return;
-    } else {
-      let abrirGaleria = await ImagePicker.launchImageLibraryAsync();
-      if (abrirGaleria.canceled === true) {
-        return;
-      } else {
-        let uri = abrirGaleria.assets[0].uri;
-        setImagen(uri);
-      }
     }
-  }
 
-  const EnviarRegistroUsuario = async (values) => {
-  
-    setUserRegistro(prevState => ({
-      ...prevState,
-      email: values.email.toLowerCase(),
-      password: values.password,
-    }));
-  
-    await crearUsuario();
+    let result = await ImagePicker.launchImageLibraryAsync();
+    if (!result.canceled) {
+      let uri = result.assets[0].uri;
+      setImagen(uri);
+    }
   };
 
-  console.log(userRegistro)
+  const EnviarRegistroUsuario = async (values) => {
+   await setIdiomaActual(values.tipoUsuario)
+    const datosCompletos = {
+      ...userRegistro, // mantiene propiedades previas
+      email: values.email.toLowerCase(),
+      password: values.password,
+      pais: values.tipoUsuario,
+      access: false,
+      codigoAcceso: "BLC2831"
+    };
+
+    setUserRegistro(datosCompletos); // opcional si quieres mantenerlo en contexto
+    await crearUsuario(datosCompletos); // ← envías el objeto completo
+  };
+
   return (
     <View style={styles.container__inicioSesion}>
-      <Image width={230} height={45} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1726996815/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/icon_xoqflq.jpg"}}></Image>
+      <Image
+        width={230}
+        height={45}
+        source={{
+          uri: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1726996815/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/icon_xoqflq.jpg"
+        }}
+      />
+
       <Formik
-        initialValues={{ email: '', password: '', repeatPassword: '' }}
+        initialValues={{
+          email: '',
+          password: '',
+          repeatPassword: '',
+          tipoUsuario: '',
+        }}
         validationSchema={RegistroSchema}
         onSubmit={values => EnviarRegistroUsuario(values)}
       >
-        {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
+        {({
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          values,
+          errors,
+          touched,
+          setFieldValue
+        }) => (
           <View style={styles.container__form}>
             <TextInput
-              onChangeText={(text) => {
-                handleChange('email')(text); // Actualiza Formik
-                setUserRegistro(prevState => ({
-                  ...prevState,
-                  email: text.toLocaleLowerCase(), // Actualiza userRegistro con el nuevo email
-                }));
-              }}
+              onChangeText={handleChange('email')}
               onBlur={handleBlur('email')}
               value={values.email}
               style={styles.input}
-              placeholderTextColor={"white"}
-              placeholder='Email'
+              placeholderTextColor="white"
+              placeholder="Email"
             />
             {touched.email && errors.email && (
               <Text style={{ color: 'red' }}>{errors.email}</Text>
             )}
 
             <TextInput
-              onChangeText={(text) => {
-                handleChange('password')(text); // Actualiza Formik
-                setUserRegistro(prevState => ({
-                  ...prevState,
-                  password: text, // Actualiza userRegistro con el nuevo password
-                }));
-              }}
+              onChangeText={handleChange('password')}
               onBlur={handleBlur('password')}
               value={values.password}
               style={styles.input}
-              placeholderTextColor={"white"}
-              placeholder='Password'
+              placeholderTextColor="white"
+              placeholder="Password"
               secureTextEntry
             />
             {touched.password && errors.password && (
@@ -147,26 +159,44 @@ const Registro = ({ navigation }) => {
               onBlur={handleBlur('repeatPassword')}
               value={values.repeatPassword}
               style={styles.input}
-              placeholderTextColor={"white"}
-              placeholder='Repeat password'
+              placeholderTextColor="white"
+              placeholder="Repeat password"
               secureTextEntry
             />
             {touched.repeatPassword && errors.repeatPassword && (
               <Text style={{ color: 'red' }}>{errors.repeatPassword}</Text>
             )}
 
-            <View style={styles.container__form}>
-              <Pressable onPress={handleSubmit} style={styles.botonLoginUsuario}>
-                <Text style={styles.botonText}>
-                  Registrar
-                </Text>
-              </Pressable>
+            <View style={styles.pickerContainer}>
+              <Picker
+                selectedValue={values.tipoUsuario}
+                onValueChange={(itemValue) => {
+                  setFieldValue('tipoUsuario', itemValue);
+                }}
+                dropdownIconColor="white"
+                style={styles.picker}
+              >
+                <Picker.Item label="Select language" value="" />
+                <Picker.Item label="Español (España)" value="españa" />
+                <Picker.Item label="Français (France)" value="francia" />
+                <Picker.Item label="Deutsch (Deutschland)" value="alemania" />
+                <Picker.Item label="Italiano (Italia)" value="italia" />
+                <Picker.Item label="Nederlands (Nederland)" value="paises bajos" />
+                <Picker.Item label="English (United States)" value="inglaterra" />
+              </Picker>
             </View>
+            {touched.tipoUsuario && errors.tipoUsuario && (
+              <Text style={{ color: 'red' }}>{errors.tipoUsuario}</Text>
+            )}
+
+            <Pressable onPress={handleSubmit} style={styles.botonLoginUsuario}>
+              <Text style={styles.botonText}>Registrar</Text>
+            </Pressable>
           </View>
         )}
       </Formik>
     </View>
   );
-}
+};
 
 export default Registro;

@@ -65,7 +65,8 @@ const actualizarPaisUsuario = async (idioma) => {
     francia: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725984645/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/francia_bluayx.png",
     inglaterra: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725984645/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/inglaterra_vgobrt.png",
     paisesBajos: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725985145/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/paises-bajos_hhqaua.png",
-    alemania: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725984645/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/bandera_ykvinl.png"
+    alemania: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725984645/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/bandera_ykvinl.png",
+    portugal: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1746808357/portugal_ynpltt.png"
   };
 
   useEffect(() => {
@@ -121,6 +122,8 @@ const actualizarPaisUsuario = async (idioma) => {
       {idiomaActual === "bandera" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Sprache wechseln</Text>}
       {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Change language</Text>}
       {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Sprache wechseln</Text>}
+      {idiomaActual === "portugal" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Alterar idioma</Text>}
+
 
 
 
@@ -147,6 +150,9 @@ const actualizarPaisUsuario = async (idioma) => {
             <Pressable onPress={() => cambiarIdioma(urlIdiomas.alemania)}>
               <Image width={70} height={60} source={{ uri: urlIdiomas.alemania }} />
             </Pressable>
+            <Pressable onPress={() => cambiarIdioma(urlIdiomas.portugal)}>
+              <Image width={70} height={60} source={{ uri: urlIdiomas.portugal }} />
+            </Pressable>
           </View>
         </View>
       </View>
@@ -158,6 +164,8 @@ const actualizarPaisUsuario = async (idioma) => {
       {idiomaActual === "bandera" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
       {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
       {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Current language</Text>}  
+      {idiomaActual === "portugal" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma atual</Text>}  
+
             
       <View style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 5, marginTop: 15 }}>
           <View style={{ display: "flex", flexDirection: "row", justifyContent: "center", gap: 15 }}>
@@ -176,8 +184,9 @@ const actualizarPaisUsuario = async (idioma) => {
           {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Se déconnecter</Text>}
           {idiomaActual === "bandera" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Abmelden</Text>}
           {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Abmelden</Text>}
-
           {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Log out</Text>}
+          {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>sair</Text>}
+
 
 
           
@@ -189,7 +198,9 @@ const actualizarPaisUsuario = async (idioma) => {
           {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Supprimer le compte</Text>}
           {idiomaActual === "bandera" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Konto löschen</Text>}
           {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Konto löschen</Text>}
-          {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Delete account</Text>}        
+          {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Delete account</Text>}   
+          {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Apagar conta</Text>}        
+     
           </Pressable>
       </View>
     </View>
