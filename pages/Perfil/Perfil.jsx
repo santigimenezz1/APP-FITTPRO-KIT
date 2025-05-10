@@ -113,6 +113,24 @@ const actualizarPaisUsuario = async (idioma) => {
   return (
     <View style={{ width: "100%", height: "100%", backgroundColor:"black", position: "relative", padding: 20 }}>
       <NavBar />
+          {idiomaActual === "espana" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Cuenta activa</Text>}
+          {idiomaActual === "italia" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Account attivo</Text>}
+          {idiomaActual === "francia" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Compte actif</Text>}
+          {idiomaActual === "bandera" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Aktives Konto</Text>}
+          {idiomaActual === "paises bajos" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 , textAlign:"center", fontSize:20}}>Actief account</Text>}
+          {idiomaActual === "inglaterra" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Active account</Text>}
+          {idiomaActual === "portugal" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Conta ativa</Text>}
+
+          {idiomaActual === "espana" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
+          {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
+          {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
+          {idiomaActual === "bandera" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
+          {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 , textAlign:"center", fontSize:20}}>{userOnline.email}</Text>}
+          {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
+          {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
+     
+
+
       <View style={{ marginTop: 10, width: "115%", display: "flex", justifyContent: "center", alignItems: "center", position: "absolute", top: "90%", gap: 10 }}>
         <Pressable onPress={() => setUsuarioOn(false)} style={{ borderWidth: 1, backgroundColor: "hsl(215, 18%, 13%)", borderColor: "hsl(215, 18%, 13%)", width: 170, borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
           

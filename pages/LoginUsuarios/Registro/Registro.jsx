@@ -183,6 +183,8 @@ const Registro = ({ navigation }) => {
                 <Picker.Item label="Italiano (Italia)" value="italia" />
                 <Picker.Item label="Nederlands (Nederland)" value="paises bajos" />
                 <Picker.Item label="English (United States)" value="inglaterra" />
+                <Picker.Item label="Português (Portugal)" value="portugal" />
+
               </Picker>
             </View>
             {touched.tipoUsuario && errors.tipoUsuario && (
