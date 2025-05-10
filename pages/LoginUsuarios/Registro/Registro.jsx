@@ -177,9 +177,9 @@ const Registro = ({ navigation }) => {
                 style={styles.picker}
               >
                 <Picker.Item label="Select language" value="" />
-                <Picker.Item label="Español (España)" value="españa" />
+                <Picker.Item label="Español (España)" value="espana" />
                 <Picker.Item label="Français (France)" value="francia" />
-                <Picker.Item label="Deutsch (Deutschland)" value="alemania" />
+                <Picker.Item label="Deutsch (Deutschland)" value="bandera" />
                 <Picker.Item label="Italiano (Italia)" value="italia" />
                 <Picker.Item label="Nederlands (Nederland)" value="paises bajos" />
                 <Picker.Item label="English (United States)" value="inglaterra" />

@@ -36,13 +36,13 @@ const TarjetaNivelDetalle = ( {setModalVisible,nivel, tiempo, navigation, ejerci
             <View style={{display:"flex", flexDirection:"row", gap:5}}>
                 {
                     ejercicio.estrellas.completas.map(()=>(
-                        <FontAwesome name="star" size={24} color="hsl(199, 76%, 28%)" />                
+                        <FontAwesome name="star" size={24} color="#34cee6" />                
                     ))
                 }
                 {
 
                       ejercicio.estrellas.vacias.map(()=>(
-                        <FontAwesome name="star-o" size={24} color="hsl(199, 76%, 28%)" />                
+                        <FontAwesome name="star-o" size={24} color="#34cee6" />                
                     ))
                 }
          </View>

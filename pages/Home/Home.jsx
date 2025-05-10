@@ -94,7 +94,10 @@ const Home = ({ navigation }) => {
     );
   }
 
+  console.log({niveles})
+
   return (
+    
     <View style={styles.home}>
       {!niveles.length > 0 ? (
         <View style={{ height: "100%", width: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
          alignItems: "center",
           backgroundColor: "hsl(199, 76%, 28%)",
-          borderColor:"green"
+          borderColor:"#34cee6"
   } ,
   botonDesactivado: {
     borderWidth: 4,
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
          alignItems: "center",
           backgroundColor: "hsl(199, 76%, 28%)",
-          borderColor:"green"
+          borderColor:"#34cee6"
 
   }
 })

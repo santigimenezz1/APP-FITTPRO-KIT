@@ -50,13 +50,13 @@ const TarjetaNivel = ( {data, nivel, tiempo, navigation} ) => {
                 <View style={{display:"flex", flexDirection:"row", gap:5}}>
                     {
                         data.data.estrellas.completas.map(()=>(
-                            <FontAwesome name="star" size={22} color="white" />                
+                            <FontAwesome name="star" size={22} color="#34cee6" />                
 
                         ))
                     }
                                       {
                         data.data.estrellas.vacias.map(()=>(
-                            <FontAwesome name="star-o" size={22} color="white" />                
+                            <FontAwesome name="star-o" size={22} color="#34cee6" />                
 
                         ))
                     }
