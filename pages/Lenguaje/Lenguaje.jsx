@@ -85,7 +85,7 @@ const cambiarIdioma = async (idioma) => {
     italia: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725984646/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/italia_r7gxfl.png",
     francia: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725984645/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/francia_bluayx.png",
     inglaterra: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725984645/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/inglaterra_vgobrt.png",
-    paisesBajos: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725985145/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/paises-bajos_hhqaua.png",
+    paisesBajos: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1746973779/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/paisesBajos_fo5ey6.png",
     alemania: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1725984645/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/bandera_ykvinl.png",
     portugal: "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1746808357/portugal_ynpltt.png"
   };
@@ -142,7 +142,7 @@ const cambiarIdioma = async (idioma) => {
       {idiomaActual === "francia" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Changer de langue</Text>}
       {idiomaActual === "bandera" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Sprache wechseln</Text>}
       {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Change language</Text>}
-      {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Sprache wechseln</Text>}
+      {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Gesproken talen</Text>}
       {idiomaActual === "portugal" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Alterar idioma</Text>}
 
 
@@ -183,7 +183,7 @@ const cambiarIdioma = async (idioma) => {
       {idiomaActual === "italia" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Lingua attuale</Text>}
       {idiomaActual === "francia" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Langue actuelle</Text>}
       {idiomaActual === "bandera" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
-      {idiomaActual === "paises bajos" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
+      {idiomaActual === "paisesBajos" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Huidige taal</Text>}
       {idiomaActual === "inglaterra" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Current language</Text>}  
       {idiomaActual === "portugal" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma atual</Text>}  
 

@@ -86,29 +86,85 @@ const actualizarPaisUsuario = async (idioma) => {
     fetchUserByEmail("test3@gmail.com"); // Reemplaza con el email que deseas buscar
   }, []);
 
-  const handleEliminarCuenta = () => {
-    Alert.alert(
-      "Confirmar eliminación",
-      "¿Estás seguro de que deseas eliminar tu cuenta?",
-      [
-        {
-          text: "Cancelar",
-          style: "cancel"
-        },
-        {
-          text: "Aceptar",
-          onPress: () => {
-            eliminarUsuario(); // Lógica para eliminar el usuario
-            showMessage({
-              message: 'Cuenta eliminada con éxito',
-              type: 'success',
-            });
-          }
-        }
-      ],
-      { cancelable: false }
-    );
+const handleEliminarCuenta = (idiomaActual) => {
+  const mensajes = {
+    espana: {
+      titulo: "Confirmar eliminación",
+      mensaje: "¿Estás seguro de que deseas eliminar tu cuenta?",
+      cancelar: "Cancelar",
+      aceptar: "Aceptar",
+      exito: "Cuenta eliminada con éxito"
+    },
+    italia: {
+      titulo: "Conferma eliminazione",
+      mensaje: "Sei sicuro di voler eliminare il tuo account?",
+      cancelar: "Annulla",
+      aceptar: "Conferma",
+      exito: "Account eliminato con successo"
+    },
+    francia: {
+      titulo: "Confirmer la suppression",
+      mensaje: "Êtes-vous sûr de vouloir supprimer votre compte ?",
+      cancelar: "Annuler",
+      aceptar: "Confirmer",
+      exito: "Compte supprimé avec succès"
+    },
+    bandera: {
+      titulo: "Löschen bestätigen",
+      mensaje: "Möchten Sie Ihr Konto wirklich löschen?",
+      cancelar: "Abbrechen",
+      aceptar: "Bestätigen",
+      exito: "Konto erfolgreich gelöscht"
+    },
+    paisesBajos: {
+      titulo: "Verwijdering bevestigen",
+      mensaje: "Weet je zeker dat je je account wilt verwijderen?",
+      cancelar: "Annuleren",
+      aceptar: "Bevestigen",
+      exito: "Account succesvol verwijderd"
+    },
+    inglaterra: {
+      titulo: "Confirm deletion",
+      mensaje: "Are you sure you want to delete your account?",
+      cancelar: "Cancel",
+      aceptar: "Confirm",
+      exito: "Account successfully deleted"
+    },
+    portugal: {
+      titulo: "Confirmar exclusão",
+      mensaje: "Tem certeza de que deseja excluir sua conta?",
+      cancelar: "Cancelar",
+      aceptar: "Confirmar",
+      exito: "Conta excluída com sucesso"
+    }
   };
+
+  const t = mensajes[idiomaActual] || mensajes["es"]; // fallback a español
+
+  Alert.alert(
+    t.titulo,
+    t.mensaje,
+    [
+      {
+        text: t.cancelar,
+        style: "cancel"
+      },
+      {
+        text: t.aceptar,
+        onPress: () => {
+          eliminarUsuario();
+          showMessage({
+            message: t.exito,
+            type: 'success',
+          });
+        }
+      }
+    ],
+    { cancelable: false }
+  );
+};
+
+console.log({idiomaActual})
 
   return (
     <View style={{ width: "100%", height: "100%", backgroundColor:"black", position: "relative", padding: 20 }}>
@@ -117,7 +173,7 @@ const actualizarPaisUsuario = async (idioma) => {
           {idiomaActual === "italia" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Account attivo</Text>}
           {idiomaActual === "francia" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Compte actif</Text>}
           {idiomaActual === "bandera" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Aktives Konto</Text>}
-          {idiomaActual === "paises bajos" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 , textAlign:"center", fontSize:20}}>Actief account</Text>}
+          {idiomaActual === "paisesBajos" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 , textAlign:"center", fontSize:20}}>Actief account</Text>}
           {idiomaActual === "inglaterra" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Active account</Text>}
           {idiomaActual === "portugal" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Conta ativa</Text>}
 
@@ -125,7 +181,7 @@ const actualizarPaisUsuario = async (idioma) => {
           {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
           {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
           {idiomaActual === "bandera" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
-          {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 , textAlign:"center", fontSize:20}}>{userOnline.email}</Text>}
+          {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 , textAlign:"center", fontSize:20}}>{userOnline.email}</Text>}
           {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
           {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
      
@@ -138,7 +194,7 @@ const actualizarPaisUsuario = async (idioma) => {
           {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Chiudere la sessione</Text>}
           {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Se déconnecter</Text>}
           {idiomaActual === "bandera" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Abmelden</Text>}
-          {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Abmelden</Text>}
+          {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Afmelden</Text>}
           {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Log out</Text>}
           {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>sair</Text>}
 
@@ -147,12 +203,12 @@ const actualizarPaisUsuario = async (idioma) => {
           
         </Pressable>
 
-        <Pressable onPress={handleEliminarCuenta} style={{ borderWidth: 1, backgroundColor: "red", borderColor: "hsl(215, 18%, 13%)", width: 170, borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Pressable onPress={() => handleEliminarCuenta(idiomaActual)} style={{ borderWidth: 1, backgroundColor: "red", borderColor: "hsl(215, 18%, 13%)", width: 170, borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
         {idiomaActual === "espana" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Eliminar cuenta</Text>}
           {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Eliminare account</Text>}
           {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Supprimer le compte</Text>}
           {idiomaActual === "bandera" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Konto löschen</Text>}
-          {idiomaActual === "paises bajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Konto löschen</Text>}
+          {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Account verwijderen</Text>}
           {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Delete account</Text>}   
           {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Apagar conta</Text>}        
      

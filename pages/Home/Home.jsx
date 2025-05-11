@@ -114,7 +114,7 @@ const Home = ({ navigation }) => {
                 {codigoCorrecto && idiomaActual === "italia" && <Text style={{ color: "red", paddingLeft: 20 }}>Codice errato</Text>}
                 {codigoCorrecto && idiomaActual === "francia" && <Text style={{ color: "red", paddingLeft: 20 }}>Code incorrect</Text>}
                 {codigoCorrecto && idiomaActual === "bandera" && <Text style={{ color: "red", paddingLeft: 20 }}>Falscher Code</Text>}
-                {codigoCorrecto && idiomaActual === "paises bajos" && <Text style={{ color: "red", paddingLeft: 20 }}>Falscher Code</Text>}
+                {codigoCorrecto && idiomaActual === "paisesBajos" && <Text style={{ color: "red", paddingLeft: 20 }}>Falscher Code</Text>}
                 {codigoCorrecto && idiomaActual === "inglaterra" && <Text style={{ color: "red", paddingLeft: 20 }}>Incorrect code</Text>}
                 {codigoCorrecto && idiomaActual === "portugal" && <Text style={{ color: "red", paddingLeft: 20 }}>Código errado</Text>}
 
@@ -128,7 +128,7 @@ const Home = ({ navigation }) => {
             {idiomaActual === "italia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Indispensabili</Text>}
             {idiomaActual === "inglaterra" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Essential</Text>}
             {idiomaActual === "bandera" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Unverzichtbar</Text>}
-            {idiomaActual === "paises bajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Unverzichtbar</Text>}
+            {idiomaActual === "paisesBajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Unverzichtbar</Text>}
             {idiomaActual === "portugal" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Fundamentos</Text>}
 
 
@@ -149,7 +149,7 @@ const Home = ({ navigation }) => {
             {idiomaActual === "italia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Esercizi</Text>}
             {idiomaActual === "inglaterra" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Exercises</Text>}
             {idiomaActual === "bandera" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Übungen</Text>}
-            {idiomaActual === "paises bajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Übungen</Text>}
+            {idiomaActual === "paisesBajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Übungen</Text>}
             {idiomaActual === "portugal" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Exercícios</Text>}
 
 

@@ -90,7 +90,7 @@ const DetalleNivelVideo = () => {
                                 {idiomaActual === "italia" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
                                 {idiomaActual === "francia" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutoriel</Text>}
                                 {idiomaActual === "bandera" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
-                                {idiomaActual === "paises bajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
+                                {idiomaActual === "paisesBajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
                                 {idiomaActual === "inglaterra" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
                                 {idiomaActual === "portugal" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
 
@@ -102,7 +102,7 @@ const DetalleNivelVideo = () => {
                                {idiomaActual === "italia" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Allenamento</Text>}
                                {idiomaActual === "francia" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Entraînement</Text>}
                                {idiomaActual === "bandera" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
-                               {idiomaActual === "paises bajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
+                               {idiomaActual === "paisesBajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
                                {idiomaActual === "inglaterra" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
                                {idiomaActual === "portugal" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Treinamento</Text>}
                             </TouchableOpacity>

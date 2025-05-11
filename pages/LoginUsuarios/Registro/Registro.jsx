@@ -181,7 +181,7 @@ const Registro = ({ navigation }) => {
                 <Picker.Item label="Français (France)" value="francia" />
                 <Picker.Item label="Deutsch (Deutschland)" value="bandera" />
                 <Picker.Item label="Italiano (Italia)" value="italia" />
-                <Picker.Item label="Nederlands (Nederland)" value="paises bajos" />
+                <Picker.Item label="Nederlands (Nederland)" value="paisesBajos" />
                 <Picker.Item label="English (United States)" value="inglaterra" />
                 <Picker.Item label="Português (Portugal)" value="portugal" />
 

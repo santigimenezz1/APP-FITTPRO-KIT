@@ -42,7 +42,7 @@ function MyTabs() {
             else if (idiomaActual === 'italia') label = 'Esercizi';
             else if (idiomaActual === 'francia') label = 'Exercices';
             else if (idiomaActual === 'bandera') label = 'Übungen';
-            else if (idiomaActual === 'paises bajos') label = 'Oefeningen';
+            else if (idiomaActual === 'paisesBajos') label = 'Oefeningen';
             else if (idiomaActual === 'inglaterra') label = 'Exercises';
             else if (idiomaActual === 'portugal') label = 'Exercícios';
           } else if (route.name === 'Lenguaje') {
@@ -50,7 +50,7 @@ function MyTabs() {
             else if (idiomaActual === 'italia') label = 'Linguaggio';
             else if (idiomaActual === 'francia') label = 'Langage';
             else if (idiomaActual === 'bandera') label = 'Sprache';
-            else if (idiomaActual === 'paises bajos') label = 'Taal';
+            else if (idiomaActual === 'paisesBajos') label = 'Taal';
             else if (idiomaActual === 'inglaterra') label = 'Language';
             else if (idiomaActual === 'portugal') label = 'Linguagem';
           } else if (route.name === 'Perfil') {
@@ -58,7 +58,7 @@ function MyTabs() {
             else if (idiomaActual === 'italia') label = 'Account';
             else if (idiomaActual === 'francia') label = 'Compte';
             else if (idiomaActual === 'bandera') label = 'Konto';
-            else if (idiomaActual === 'paises bajos') label = 'Account';
+            else if (idiomaActual === 'paisesBajos') label = 'Account';
             else if (idiomaActual === 'inglaterra') label = 'Account';
             else if (idiomaActual === 'portugal') label = 'Conta';
           }

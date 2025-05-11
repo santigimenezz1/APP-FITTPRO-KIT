@@ -32,7 +32,7 @@ const TarjetaNivel = ( {data, nivel, tiempo, navigation} ) => {
                     {idiomaActual === "italia" && <Text style={styles.text}>{nivel.nombreItalia}</Text>}
                     {idiomaActual === "inglaterra" && <Text style={styles.text}>{nivel.nombreEstadosUnidos}</Text>}
                     {idiomaActual === "bandera" && <Text style={styles.text}>{nivel.nombreAlemania}</Text>}
-                    {idiomaActual === "paises bajos" && <Text style={styles.text}>{nivel.nombreAlemania}</Text>}
+                    {idiomaActual === "paisesBajos" && <Text style={styles.text}>{nivel.nombreAlemania}</Text>}
                     {idiomaActual === "portugal" && <Text style={styles.text}>{nivel.nombrePortugal}</Text>}
 
 
