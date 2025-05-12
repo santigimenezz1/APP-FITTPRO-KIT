@@ -130,29 +130,7 @@ export default function App() {
     Roboto_400Regular,
   });
 
-  useEffect(() => {
-    const checkForUpdate = async () => {
-      try {
-        const latestVersion = await VersionCheck.getLatestVersion();
-        const currentVersion = VersionCheck.getCurrentVersion();
-
-        if (currentVersion < latestVersion) {
-          Alert.alert(
-            "Actualización disponible",
-            "Debes actualizar la app para seguir usándola.",
-            [
-              { text: "Actualizar", onPress: () => Linking.openURL(VersionCheck.getStoreUrl()) }
-            ],
-            { cancelable: false }
-          );
-        }
-      } catch (error) {
-        console.error("Error al verificar actualizaciones:", error);
-      }
-    };
-
-    checkForUpdate();
-  }, []);
+  
 
   if (!fontsLoaded) {
     return <AppLoading />;
