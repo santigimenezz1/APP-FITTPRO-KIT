@@ -13,16 +13,16 @@ import { Picker } from '@react-native-picker/picker';
 // ✅ Validación con Yup                
 const RegistroSchema = Yup.object().shape({
   email: Yup.string()
-    .email('Email no válido')
-    .required('El email es requerido'),
-  password: Yup.string()
-    .min(6, 'La contraseña debe tener al menos 6 caracteres')
-    .required('La contraseña es requerida'),
-  repeatPassword: Yup.string()
-    .oneOf([Yup.ref('password'), null], 'Las contraseñas deben coincidir')
-    .required('La confirmación de la contraseña es requerida'),
-  tipoUsuario: Yup.string()
-    .required('Selecciona un país o idioma'),
+  .email('Invalid email')
+  .required('Email is required'),
+password: Yup.string()
+  .min(6, 'Password must be at least 6 characters')
+  .required('Password is required'),
+repeatPassword: Yup.string()
+  .oneOf([Yup.ref('password'), null], 'Passwords must match')
+  .required('Password confirmation is required'),
+tipoUsuario: Yup.string()
+  .required('Select a country or language')
 });
 
 const Registro = ({ navigation }) => {
@@ -41,8 +41,8 @@ const Registro = ({ navigation }) => {
       const usuarioExistente = await verificarUsuarioExistente(usuario.email);
       if (usuarioExistente) {
         showMessage({
-          message: 'Usuario ya registrado',
-          description: 'El email ingresado ya está en uso.',
+         message: 'User already registered',
+         description: 'The entered email is already in use.',
           type: 'danger',
         });
         return;
@@ -55,16 +55,21 @@ const Registro = ({ navigation }) => {
       const userColecction = collection(db, "usuarios");
       await addDoc(userColecction, usuario);
 
-      showMessage({
-        message: 'Registro exitoso',
-        description: '¡Usuario creado correctamente!',
-        type: 'success',
-      });
+     showMessage({
+                message: '✅',
+                type: 'success',
+                style: {
+      height: 100,
+      width:100,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+              });
 
     } catch (error) {
       showMessage({
-        message: 'Error en el registro',
-        description: error.message || 'Algo salió mal. Inténtalo de nuevo.',
+        message: 'Registration error',
+        description: error.message || 'Something went wrong. Please try again.',
         type: 'danger',
       });
     }

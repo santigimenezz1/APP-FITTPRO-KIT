@@ -164,6 +164,8 @@ const handleEliminarCuenta = (idiomaActual) => {
           showMessage({
             message: t.exito,
             type: 'success',
+            
+            
           });
         }
       }
@@ -214,12 +216,12 @@ console.log({idiomaActual})
           
         </Pressable>
 
-        <Pressable onPress={() => handleEliminarCuenta(idiomaActual)} style={{ borderWidth: 1, backgroundColor: "red", borderColor: "hsl(215, 18%, 13%)", width: 170, borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Pressable onPress={() => handleEliminarCuenta(idiomaActual)} style={{ borderWidth: 1, backgroundColor: "red", borderColor: "hsl(215, 18%, 13%)", width: 170,  borderRadius: 4, height: 35, display: "flex", justifyContent: "center", alignItems: "center" }}>
         {idiomaActual === "espana" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Eliminar cuenta</Text>}
           {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Eliminare account</Text>}
           {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Supprimer le compte</Text>}
           {idiomaActual === "bandera" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Konto löschen</Text>}
-          {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Account verwijderen</Text>}
+          {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, }}>Account verwijderen</Text>}
           {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Delete account</Text>}   
           {idiomaActual === "estadosUnidos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Delete account</Text>}   
           {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 }}>Apagar conta</Text>}        

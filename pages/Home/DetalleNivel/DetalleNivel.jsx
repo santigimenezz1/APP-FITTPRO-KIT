@@ -24,8 +24,8 @@ const DetalleNivel = () => {
         >
             {
                 data &&
-                data.data.ejercicios.map((ejercicio)=>(
-                    <ModalCodigoDesbloqueo nivel={rutaNivel} tiempo={ejercicio.tiempo} navigation={navigation} ejercicio={ejercicio} />
+                data.data.ejercicios.map((ejercicio, index)=>(
+                    <ModalCodigoDesbloqueo nivel={rutaNivel} tiempo={ejercicio.tiempo} navigation={navigation} ejercicio={ejercicio} numero = {index + 1 }/>
                     ))
 
             }

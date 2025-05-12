@@ -45,7 +45,14 @@ const TarjetaNivel = ( {data, nivel, tiempo, navigation} ) => {
                 !closed ?
             <View style={styles.container__candado}>
             <Image width={22} height={22} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1720478069/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/cerrar_qrawqr.png"}}></Image>
-            <Text style={styles.text__bloqueado}>Bloqueado</Text>
+                    {idiomaActual === "espana" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Bloqueado</Text>}
+                    {idiomaActual === "italia" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Bloccato</Text>}
+                    {idiomaActual === "francia" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Bloqué</Text>}
+                    {idiomaActual === "bandera" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Blockiert</Text>}
+                    {idiomaActual === "inglaterra" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Blocked</Text>}
+                    {idiomaActual === "paisesBajos" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Geblokkeerd</Text>}
+                    {idiomaActual === "portugal" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Bloqueado</Text>}
+                    {idiomaActual === "estadosUnidos" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Blocked</Text>}
             </View>
             : (
                 <View style={{display:"flex", flexDirection:"row", gap:5}}>

@@ -8,7 +8,7 @@ import { collection, doc, getDocs, query, updateDoc, where } from "firebase/fire
 import { db } from "../../../firebaseConfig"
 
 const TarjetaIngresoCodigo = ( {CerrarModal, codigoCorrecto, setCodigoCorrecto} ) => {
-    const {closed, setClosed, userRegistro, userOnline} = useContext(CartContext)
+    const {closed, setClosed, userRegistro, userOnline,idiomaActual} = useContext(CartContext)
     const [text, setText] = useState("")
 
     const guardarText = (text) => {
@@ -37,9 +37,14 @@ const TarjetaIngresoCodigo = ( {CerrarModal, codigoCorrecto, setCodigoCorrecto} 
               setClosed(true);
               CerrarModal();
               showMessage({
-                message: 'Bienvenido a FITTLLINE',
-                description: 'LLEVA TU HABILIDAD AL EXTREMO',
+                message: '✅',
                 type: 'success',
+                style: {
+      height: 100,
+      width:100,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
               });
       
             } else {
@@ -57,9 +62,16 @@ const TarjetaIngresoCodigo = ( {CerrarModal, codigoCorrecto, setCodigoCorrecto} 
     return (
         <View style={styles.container}>
             <Image width={25} height={25} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1720478069/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/cerrar_qrawqr.png"}}></Image>
-            <TextInput onChangeText={(text)=>guardarText(text)} placeholder="Codigo" placeholderTextColor="hsl(0, 0%, 74%)" style={styles.input}/>
+            <TextInput onChangeText={(text)=>guardarText(text)} placeholder="Code" placeholderTextColor="hsl(0, 0%, 74%)" style={styles.input}/>
             <TouchableOpacity onPress={()=>validacionCodigo()} style={styles.button}>
-                <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Continuar</Text>
+                    {idiomaActual === "espana" && <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Continunar</Text>}
+                    {idiomaActual === "italia" && <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Continua</Text>}
+                    {idiomaActual === "francia" && <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Continuer</Text>}
+                    {idiomaActual === "bandera" && <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Fortsetzen</Text>}
+                    {idiomaActual === "inglaterra" && <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Continue</Text>}
+                    {idiomaActual === "estadosUnidos" && <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Continue</Text>}
+                    {idiomaActual === "paisesBajos" && <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Doorgaan</Text>}
+                    {idiomaActual === "portugal" && <Text style={{color:"white", fontWeight:"bold",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Continuar</Text>}
                 </TouchableOpacity>
         </View>
     )
