@@ -184,6 +184,8 @@ const Registro = ({ navigation }) => {
                 <Picker.Item label="Nederlands (Nederland)" value="paisesBajos" />
                 <Picker.Item label="English (United States)" value="inglaterra" />
                 <Picker.Item label="Português (Portugal)" value="portugal" />
+                <Picker.Item label="United States (USA)" value="estadosUnidos" />
+
 
               </Picker>
             </View>

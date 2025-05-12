@@ -92,6 +92,7 @@ const DetalleNivelVideo = () => {
                                 {idiomaActual === "bandera" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
                                 {idiomaActual === "paisesBajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
                                 {idiomaActual === "inglaterra" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
+                                {idiomaActual === "estadosUnidos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
                                 {idiomaActual === "portugal" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Tutorial</Text>}
 
                             </TouchableOpacity>
@@ -104,6 +105,7 @@ const DetalleNivelVideo = () => {
                                {idiomaActual === "bandera" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
                                {idiomaActual === "paisesBajos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
                                {idiomaActual === "inglaterra" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
+                               {idiomaActual === "estadosUnidos" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Training</Text>}
                                {idiomaActual === "portugal" && <Text style={{ color: "white", textAlign: "center", letterSpacing: 1, fontFamily: 'NunitoSans_400Regular' }}>Treinamento</Text>}
                             </TouchableOpacity>
                         </View>

@@ -14,8 +14,9 @@ const TarjetaCalentamiento = ( {data, nivel, tiempo, navigation} ) => {
                     {idiomaActual === "francia" && <Text style={styles.text}>{nivel.nombreFrancia}</Text>}
                     {idiomaActual === "italia" && <Text style={styles.text}>{nivel.nombreItalia}</Text>}
                     {idiomaActual === "inglaterra" && <Text style={styles.text}>{nivel.nombreEstadosUnidos}</Text>}
+                    {idiomaActual === "estadosUnidos" && <Text style={styles.text}>{nivel.nombreEstadosUnidos}</Text>}
                     {idiomaActual === "bandera" && <Text style={styles.text}>{nivel.nombreAlemania}</Text>}   
-                    {idiomaActual === "paisesBajos" && <Text style={styles.text}>{nivel.nombreAlemania}</Text>}    
+                    {idiomaActual === "paisesBajos" && <Text style={styles.text}>{nivel.nombrePaisesBajos}</Text>}    
                     {idiomaActual === "portugal" && <Text style={styles.text}>{nivel.nombrePortugal}</Text>}            
         
          
