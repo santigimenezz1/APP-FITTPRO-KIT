@@ -150,43 +150,57 @@ const cambiarIdioma = async (idioma) => {
       {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Gesproken talen</Text>}
       {idiomaActual === "portugal" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Alterar idioma</Text>}
 
+<View style={{
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: 10,
+  marginTop: 15,
+  padding: 10
+}}>
+  {/* Primera fila */}
+  <View style={{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 10
+  }}>
+    <Pressable onPress={() => cambiarIdioma(urlIdiomas.españa)}>
+      <Image width={70} height={60} source={{ uri: urlIdiomas.españa }} />
+    </Pressable>
+    <Pressable onPress={() => cambiarIdioma(urlIdiomas.italia)}>
+      <Image width={70} height={60} source={{ uri: urlIdiomas.italia }} />
+    </Pressable>
+    <Pressable onPress={() => cambiarIdioma(urlIdiomas.francia)}>
+      <Image width={70} height={60} source={{ uri: urlIdiomas.francia }} />
+    </Pressable>
+    <Pressable onPress={() => cambiarIdioma(urlIdiomas.inglaterra)}>
+      <Image width={70} height={60} source={{ uri: urlIdiomas.inglaterra }} />
+    </Pressable>
+  </View>
 
-
-
-        
-        <View style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 5, marginTop: 15 }}>
-          <View style={{ display: "flex", flexDirection: "row", justifyContent: "center", gap: 15 }}>
-            <Pressable onPress={() => cambiarIdioma(urlIdiomas.españa)}>
-              <Image width={70} height={60} source={{ uri: urlIdiomas.españa }} />
-            </Pressable>
-            <Pressable onPress={() => cambiarIdioma(urlIdiomas.italia)}>
-              <Image width={70} height={60} source={{ uri: urlIdiomas.italia }} />
-            </Pressable>
-            <Pressable onPress={() => cambiarIdioma(urlIdiomas.francia)}>
-              <Image width={70} height={60} source={{ uri: urlIdiomas.francia }} />
-            </Pressable>
-          </View>
-          <View style={{ display: "flex", flexDirection: "row", justifyContent: "center", gap: 15 }}>
-            <Pressable onPress={() => cambiarIdioma(urlIdiomas.inglaterra)}>
-              <Image width={70} height={60} source={{ uri: urlIdiomas.inglaterra }} />
-            </Pressable>
-            <Pressable onPress={() => cambiarIdioma(urlIdiomas.estadosUnidos)}>
-              <Image width={70} height={60} source={{ uri: urlIdiomas.estadosUnidos }} />
-            </Pressable>
-            <Pressable onPress={() => cambiarIdioma(urlIdiomas.paisesBajos)}>
-              <Image width={70} height={60} source={{ uri: urlIdiomas.paisesBajos }} />
-            </Pressable>
-            <Pressable onPress={() => cambiarIdioma(urlIdiomas.alemania)}>
-              <Image width={70} height={60} source={{ uri: urlIdiomas.alemania }} />
-            </Pressable>
-            <Pressable onPress={() => cambiarIdioma(urlIdiomas.portugal)}>
-              <Image width={70} height={60} source={{ uri: urlIdiomas.portugal }} />
-            </Pressable>
-          </View>
-        </View>
-      </View>
-
-      <View style={{ marginTop: 20 }}>
+  {/* Segunda fila */}
+  <View style={{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 10,
+    marginTop: 10
+  }}>
+    <Pressable onPress={() => cambiarIdioma(urlIdiomas.estadosUnidos)}>
+      <Image width={70} height={60} source={{ uri: urlIdiomas.estadosUnidos }} />
+    </Pressable>
+    <Pressable onPress={() => cambiarIdioma(urlIdiomas.paisesBajos)}>
+      <Image width={70} height={60} source={{ uri: urlIdiomas.paisesBajos }} />
+    </Pressable>
+    <Pressable onPress={() => cambiarIdioma(urlIdiomas.alemania)}>
+      <Image width={70} height={60} source={{ uri: urlIdiomas.alemania }} />
+    </Pressable>
+    <Pressable onPress={() => cambiarIdioma(urlIdiomas.portugal)}>
+      <Image width={70} height={60} source={{ uri: urlIdiomas.portugal }} />
+    </Pressable>
+  </View>
+</View>
       {idiomaActual === "espana" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma actual</Text>}
       {idiomaActual === "italia" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Lingua attuale</Text>}
       {idiomaActual === "francia" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Langue actuelle</Text>}
@@ -202,7 +216,16 @@ const cambiarIdioma = async (idioma) => {
             <Pressable>
               <Image width={70} height={60} source={{ uri: idioma }} />
             </Pressable>
+            
           </View>
+      {idiomaActual === "espana" && <Text style={{ color: "white", fontSize: 16, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>España</Text>}
+      {idiomaActual === "italia" && <Text style={{ color: "white", fontSize: 16, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Italia</Text>}
+      {idiomaActual === "francia" && <Text style={{ color: "white", fontSize: 16, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>France</Text>}
+      {idiomaActual === "bandera" && <Text style={{ color: "white", fontSize: 16, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Germany</Text>}
+      {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontSize: 16, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>England</Text>}
+      {idiomaActual === "estadosUnidos" && <Text style={{ color: "white", fontSize: 16, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>United States</Text>}
+      {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontSize: 16, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Netherlands</Text>}
+      {idiomaActual === "portugal" && <Text style={{ color: "white", fontSize: 16, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Portugal</Text>}
         </View>
       </View>
 

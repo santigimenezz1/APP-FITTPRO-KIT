@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     },
     text:{
         color:"white",
-        fontSize: RFValue(20), // Ajusta el tamaño de la fuente de manera responsiva
+        fontSize: RFValue(17), // Ajusta el tamaño de la fuente de manera responsiva
         fontWeight:"bold",
         fontFamily: 'NunitoSans_400Regular',
         letterSpacing:1.7
