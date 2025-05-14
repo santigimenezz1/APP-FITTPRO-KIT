@@ -16,7 +16,9 @@ const LoginUsuarioNavigator = () => {
         <View style={{ flex: 1 }}>
             <Stack.Navigator screenOptions={{
                 headerStyle: {
-                    backgroundColor:"hsl(199, 76%, 28%)",
+                    backgroundColor:"black",
+                    borderWidth:3,
+                    borderBottomColor:"#FF6B00"
                 },
                 headerTintColor: 'white', 
                 headerTitleStyle: {
@@ -25,6 +27,7 @@ const LoginUsuarioNavigator = () => {
                     letterSpacing: 2.5,    // Espaciado entre letras del título
                     textAlign: 'center',   // Alineación del texto
                     fontFamily: 'NunitoSans_400Regular',
+                    
                 },
                 
             }}>

@@ -36,7 +36,7 @@ const InicioSesion = () => {
     >
       {({ handleChange, handleBlur, handleSubmit, values, errors, touched, setFieldTouched }) => (
         <View style={styles.container__inicioSesion}>
-        <Image width={230} height={45} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1726996815/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/icon_xoqflq.jpg"}}></Image>
+        <Image width={270} height={85} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1747227997/futlab_8_kbt77p.png"}}></Image>
 
           <View style={styles.container__form}>
             <TextInput

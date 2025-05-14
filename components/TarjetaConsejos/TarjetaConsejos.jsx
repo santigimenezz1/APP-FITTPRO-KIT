@@ -18,7 +18,7 @@ const TarjetaConsejos = () => {
         <View style={styles.container__tarjetaConsejos}>
             <Text style={styles.tittle}>Consejos</Text>
             <View style={styles.container__consejos}>
-            <FontAwesome name="calendar-check-o" size={24} color="hsl(199, 76%, 28%)" />  
+            <FontAwesome name="calendar-check-o" size={24} color="#FF6B00" />  
                       <View style={{width:"80%"}}>
                       {idiomaActual === "espana" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Entrena de 10-30 minutos por dia para obtener los mejores resultados. La constancia es fundamental</Text>}
                     {idiomaActual === "italia" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Allénati per 10-30 minuti al giorno per ottenere i migliori risultati. La costanza è fondamentale</Text>}
@@ -33,7 +33,7 @@ const TarjetaConsejos = () => {
             </View>
 
             <View style={styles.container__consejos}>
-            <AntDesign name="clockcircleo" size={24} color="hsl(199, 76%, 28%)" />           
+            <AntDesign name="clockcircleo" size={24} color="#FF6B00" />           
              <View style={{width:"80%"}}>
                     {idiomaActual === "espana" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Empieza despacio, dominalo y luego tu decides la velocidad</Text>}
                     {idiomaActual === "italia" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Inizia lentamente, padroneggialo e poi decidi tu la velocità</Text>}
@@ -47,7 +47,7 @@ const TarjetaConsejos = () => {
             </View>
             </View>
             <View style={styles.container__consejos}>
-            <FontAwesome6 name="person-running" size={24} color="hsl(199, 76%, 28%)" />   
+            <FontAwesome6 name="person-running" size={24} color="#FF6B00" />   
                      <View style={{width:"80%"}}>
                      {idiomaActual === "espana" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>No te sales ejercicios para mejorar por igual diferentes habilidades</Text>}
                     {idiomaActual === "italia" && <Text style={{color:"white", letterSpacing:1, fontSize:RFValue(13),fontFamily: 'NunitoSans_400Regular',}}>Non saltare gli esercizi per migliorare equamente le diverse abilità</Text>}

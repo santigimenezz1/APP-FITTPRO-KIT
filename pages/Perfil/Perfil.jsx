@@ -179,14 +179,14 @@ console.log({idiomaActual})
   return (
     <View style={{ width: "100%", height: "100%", backgroundColor:"black", position: "relative", padding: 20 }}>
       <NavBar />
-          {idiomaActual === "espana" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Cuenta activa</Text>}
-          {idiomaActual === "italia" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Account attivo</Text>}
-          {idiomaActual === "francia" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Compte actif</Text>}
-          {idiomaActual === "bandera" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Aktives Konto</Text>}
-          {idiomaActual === "paisesBajos" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 , textAlign:"center", fontSize:20}}>Actief account</Text>}
-          {idiomaActual === "inglaterra" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Active account</Text>}
-          {idiomaActual === "estadosUnidos" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Active account</Text>}
-          {idiomaActual === "portugal" && <Text style={{ color: "#34cee6", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Conta ativa</Text>}
+          {idiomaActual === "espana" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Cuenta activa</Text>}
+          {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Account attivo</Text>}
+          {idiomaActual === "francia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Compte actif</Text>}
+          {idiomaActual === "bandera" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Aktives Konto</Text>}
+          {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1 , textAlign:"center", fontSize:20}}>Actief account</Text>}
+          {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Active account</Text>}
+          {idiomaActual === "estadosUnidos" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Active account</Text>}
+          {idiomaActual === "portugal" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>Conta ativa</Text>}
 
           {idiomaActual === "espana" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}
           {idiomaActual === "italia" && <Text style={{ color: "white", fontFamily: "NunitoSans_700Bold", letterSpacing: 1, textAlign:"center", fontSize:20 }}>{userOnline.email}</Text>}

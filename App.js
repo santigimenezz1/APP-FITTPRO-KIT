@@ -33,7 +33,7 @@ function MyTabs() {
           borderTopColor: 'black',
           borderTopWidth: 4,
           paddingBottom: 20,
-          borderColor: '#34cee6',
+          borderColor: '#FF6B00',
         },
         tabBarLabel: ({ focused }) => {
           let label = '';
@@ -70,7 +70,7 @@ function MyTabs() {
 
           return (
             <Text style={{
-              color: focused ? '#34cee6' : 'white',
+              color: focused ? '#FF6B00' : 'white',
               fontSize: RFValue(13),
               fontFamily: 'Roboto_400Regular',
               letterSpacing: 1,
@@ -88,7 +88,7 @@ function MyTabs() {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-              <FontAwesome5 name="play" size={20} color={focused ? '#34cee6' : 'white'} />
+              <FontAwesome5 name="play" size={20} color={focused ? '#FF6B00' : 'white'} />
             </View>
           ),
         }}

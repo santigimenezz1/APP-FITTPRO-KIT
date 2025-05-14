@@ -24,13 +24,13 @@ import { showMessage } from "react-native-flash-message";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyC41t4X49mx5KaUpAApb3E7mx7C5D3BM_8",
-  authDomain: "app-futbol-5cbc0.firebaseapp.com",
-  projectId: "app-futbol-5cbc0",
-  storageBucket: "app-futbol-5cbc0.appspot.com",
-  messagingSenderId: "131865096972",
-  appId: "1:131865096972:web:daf9ed03fd3428901a0f29",
-  measurementId: "G-0PMRNQBNFK"
+  apiKey: "AIzaSyD-5BEJfqJs17ii7MIkufC-rSEMqk2uxww",
+  authDomain: "kit-soccer-fittlline.firebaseapp.com",
+  projectId: "kit-soccer-fittlline",
+  storageBucket: "kit-soccer-fittlline.firebasestorage.app",
+  messagingSenderId: "144159455233",
+  appId: "1:144159455233:web:9247c6dccafe6a79016800",
+  measurementId: "G-YMMS6W2LYX"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

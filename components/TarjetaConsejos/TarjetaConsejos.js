@@ -6,10 +6,10 @@ const styles = StyleSheet.create({
         width:"100%",
         height:"auto",
         borderRadius:12,
-        backgroundColor: "hsl(215, 18%, 13%)",
+        backgroundColor: "#1C1C1E",
         display:"flex",
         gap:2,
-        padding:10
+        padding:16
     
 
     },

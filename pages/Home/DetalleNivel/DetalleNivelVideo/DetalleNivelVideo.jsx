@@ -43,16 +43,16 @@ const DetalleNivelVideo = () => {
                         <View>
                             <View style={{ display: "flex", flexDirection: "row", gap: 5 }}>
                                 {ejercicio.estrellas.completas.map((_, index) => (
-                                    <FontAwesome key={index} name="star" size={24} color="#34cee6" />
+                                    <FontAwesome key={index} name="star" size={24} color="#FF6B00" />
                                 ))}
                                 {ejercicio.estrellas.vacias.map((_, index) => (
-                                    <FontAwesome key={index} name="star-o" size={24} color="#34cee6" />
+                                    <FontAwesome key={index} name="star-o" size={24} color="#FF6B00" />
                                 ))}
                             </View>
                         </View>
                        
                     </View>
-                    <Text style={{color:"#34cee6", letterSpacing:2, fontSize:25, marginBottom:10}}>{botonActive}</Text>
+                    <Text style={{color:"white", letterSpacing:2, fontSize:25, marginBottom:10}}>{botonActive}</Text>
                     
                     {/* Video Container */}
                     <View style={{ width: "90%", height: 200 }}>
@@ -75,7 +75,7 @@ const DetalleNivelVideo = () => {
                         />
                         }
                     </View>
-                    <View style={{ width: RFValue(300), borderWidth: 3, borderColor: "#34cee6", marginTop: 20 }}>
+                    <View style={{ width: RFValue(300), borderWidth: 3, borderColor: "#FF6B00", marginTop: 20 }}>
                         <Image source={{ uri: ejercicio.imagenVideo }} style={{ width: "100%", height: RFValue(120) }} />
                     </View>
                     

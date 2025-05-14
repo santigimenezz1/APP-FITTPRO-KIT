@@ -15,7 +15,7 @@ const HomeNavigator = () => {
     
     <Stack.Navigator screenOptions={{
           headerStyle: {
-            backgroundColor: "#34cee6",
+            backgroundColor: "#FF6B00",
           height:RFValue(110),
         },
         headerShadowVisible: false, // Esta propiedad elimina el borde inferior
@@ -23,7 +23,7 @@ const HomeNavigator = () => {
           fontSize: RFValue(25),
           fontFamily: 'NunitoSans_400Regular',
           letterSpacing:2,
-          color:"black"
+          color:"white"
         },
         headerTintColor: 'black',
         // Color del texto del encabezado

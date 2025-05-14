@@ -94,7 +94,6 @@ const Home = ({ navigation }) => {
     );
   }
 
-  console.log({niveles})
 
   return (
     
@@ -124,28 +123,8 @@ const Home = ({ navigation }) => {
               </>
             )}
 
-            {idiomaActual === "espana" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Imprescindibles</Text>}
-            {idiomaActual === "francia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Indispensables</Text>}
-            {idiomaActual === "italia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Indispensabili</Text>}
-            {idiomaActual === "inglaterra" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Essential</Text>}
-            {idiomaActual === "estadosUnidos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Essential</Text>}
-            {idiomaActual === "bandera" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Unverzichtbar</Text>}
-            {idiomaActual === "paisesBajos" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Onmisbaar</Text>}
-            {idiomaActual === "portugal" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Fundamentos</Text>}
-
-
-            {niveles.length > 0 &&
-              niveles.filter((nivel) => nivel.data.nombre === "Primeros pasos")
-                .map((nivel) => (
-                  <TarjetaCalentamiento
-                    key={nivel.id}
-                    data={nivel}
-                    navigation={navigation}
-                    nivel={nivel.data}
-                    tiempo={nivel.data.tiempoTotal}
-                  />
-                ))
-            }
+        
+           
             {idiomaActual === "espana" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Ejercicios</Text>}
             {idiomaActual === "francia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Exercices</Text>}
             {idiomaActual === "italia" && <Text style={styles.home__sectionTitle}><FontAwesome5 name="play" size={18} color="white" />  Esercizi</Text>}

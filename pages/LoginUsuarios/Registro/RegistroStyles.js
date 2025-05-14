@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "hsl(199, 76%, 28%)",
+    backgroundColor: "#FF6B00",
   },
   botonLoginGoogle: {
     width: "auto",

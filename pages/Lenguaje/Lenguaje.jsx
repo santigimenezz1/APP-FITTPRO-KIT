@@ -201,14 +201,14 @@ const cambiarIdioma = async (idioma) => {
     </Pressable>
   </View>
 </View>
-      {idiomaActual === "espana" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma actual</Text>}
-      {idiomaActual === "italia" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Lingua attuale</Text>}
-      {idiomaActual === "francia" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Langue actuelle</Text>}
-      {idiomaActual === "bandera" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
-      {idiomaActual === "paisesBajos" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Huidige taal</Text>}
-      {idiomaActual === "inglaterra" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Current language</Text>}  
-      {idiomaActual === "estadosUnidos" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Current language</Text>}  
-      {idiomaActual === "portugal" && <Text style={{ color: "#34cee6", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma atual</Text>}  
+      {idiomaActual === "espana" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma actual</Text>}
+      {idiomaActual === "italia" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Lingua attuale</Text>}
+      {idiomaActual === "francia" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Langue actuelle</Text>}
+      {idiomaActual === "bandera" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Aktuelle Sprache</Text>}
+      {idiomaActual === "paisesBajos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Huidige taal</Text>}
+      {idiomaActual === "inglaterra" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Current language</Text>}  
+      {idiomaActual === "estadosUnidos" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Current language</Text>}  
+      {idiomaActual === "portugal" && <Text style={{ color: "white", fontSize: 20, textAlign: "center", letterSpacing: 2, fontFamily: 'NunitoSans_400Regular', }}>Idioma atual</Text>}  
 
             
       <View style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 5, marginTop: 15 }}>

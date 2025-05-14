@@ -5,19 +5,18 @@ const styles = StyleSheet.create({
     container__tarjetaNivelDetalle:{
  
     },
-    container__tarjetaNivel:{
-        width:"100%",
-        padding:14,
-        paddingLeft:20,
-        borderRadius:10,
-        backgroundColor: "hsl(215, 18%, 13%)",
-        height:RFValue(85),
-        display:"flex",
-        flexDirection:"row",
-        alignItems:"center",
-        justifyContent:"space-between",
-  
-    },
+    container__tarjetaNivel: {
+  width: "100%",
+  padding: 14,
+  paddingLeft: 20,
+  borderRadius: 10,
+ backgroundColor: "rgba(212, 105, 17, 0.82)", // el último valor (0.5) es la opacidad
+  height: RFValue(85),
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+},
     container__bloqueado:{
       display:"flex",
       justifyContent:"center",

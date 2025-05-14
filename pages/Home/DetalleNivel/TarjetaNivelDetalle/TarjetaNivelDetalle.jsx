@@ -23,7 +23,7 @@ const TarjetaNivelDetalle = ( {setModalVisible,nivel, tiempo, navigation, ejerci
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
   {/* Caja izquierda con el número */}
   <View style={{ marginRight: 10 }}>
-    <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#34cee6' }}>{numero}</Text>
+    <Text style={{ fontSize: 32, fontWeight: 'bold', color: 'white' }}>{numero}</Text>
   </View>
 
   {/* Caja derecha con los textos */}
@@ -36,7 +36,7 @@ const TarjetaNivelDetalle = ( {setModalVisible,nivel, tiempo, navigation, ejerci
                 !closed ?
             <View style={styles.container__bloqueado}> 
             <View style={{width:"100%",display:"flex",alignItems:"center"}}>
-            <Image  width={22} height={22} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1720478069/APP%20ALFOMBRA%20DE%20FUTBOL%20AMAZON/cerrar_qrawqr.png"}}></Image>
+            <Image  width={22} height={22} source={{uri:"https://res.cloudinary.com/dcf9eqqgt/image/upload/v1747228419/candado_2_oloewu.png"}}></Image>
             </View>
                     {idiomaActual === "espana" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Bloqueado</Text>}
                     {idiomaActual === "italia" && <Text style={{color:"white",fontFamily: 'NunitoSans_400Regular', letterSpacing:1}}>Bloccato</Text>}
@@ -51,13 +51,13 @@ const TarjetaNivelDetalle = ( {setModalVisible,nivel, tiempo, navigation, ejerci
             <View style={{display:"flex", flexDirection:"row", gap:5}}>
                 {
                     ejercicio.estrellas.completas.map(()=>(
-                        <FontAwesome name="star" size={24} color="#34cee6" />                
+                        <FontAwesome name="star" size={24} color="white" />                
                     ))
                 }
                 {
 
                       ejercicio.estrellas.vacias.map(()=>(
-                        <FontAwesome name="star-o" size={24} color="#34cee6" />                
+                        <FontAwesome name="star-o" size={24} color="white" />                
                     ))
                 }
          </View>
