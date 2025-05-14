@@ -6,20 +6,27 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "store",
+      "ios": {
+        "image": "macos-sequoia-15.3-xcode-16.2"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "store",
+      "ios": {
+        "image": "macos-sequoia-15.3-xcode-16.2"
+      }
     },
     "production": {
-      "autoIncrement": true, 
+      "autoIncrement": true,
       "releaseChannel": "production",
       "android": {
         "buildType": "app-bundle"
-
       },
       "ios": {
+        "distribution": "store",
         "buildConfiguration": "Release",
+        "image": "macos-sequoia-15.3-xcode-16.2",
         "env": {
           "EXPO_USE_MODULAR_HEADERS": "true"
         }
